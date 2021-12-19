@@ -42,3 +42,54 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
+}
+
+.navbar__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: var(--color-primary);
+}
+
+.navbar__logo {
+  width: 50px;
+}
+
+.navbar__marker {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.navbar__nav-left,
+.navbar__nav-right {
+  display: flex;
+  column-gap: 30px;
+}
+
+.navbar__nav-left {
+  text-transform: uppercase;
+  flex: 1;
+  margin-left: 40px;
+}
+
+.navbar__nav-right li:first-child {
+  display: flex;
+}
