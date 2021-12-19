@@ -81,15 +81,45 @@ img {
 .navbar__nav-left,
 .navbar__nav-right {
   display: flex;
-  column-gap: 30px;
+  align-items: center;
 }
 
 .navbar__nav-left {
   text-transform: uppercase;
   flex: 1;
   margin-left: 40px;
+  column-gap: 30px;
+}
+
+.navbar__nav-right {
+  column-gap: 20px;
 }
 
 .navbar__nav-right li:first-child {
   display: flex;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: none;
+  border: 1px #000 solid;
+  border-radius: 50px;
+  padding: 7px 16px;
+  text-align: center;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.btn-dark--outline:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #333;
 }
