@@ -118,10 +118,12 @@ section a {
   text-align: center;
   line-height: 1.2;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.btn-dark--outline:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+.btn-light--outline {
+  border-color: #fff;
+  color: #fff;
 }
 
 .btn-dark {
@@ -129,8 +131,18 @@ section a {
   color: #fff;
 }
 
+.btn-dark--outline {
+  border-color: #000;
+  color: #000;
+}
+
 .btn-dark:hover {
   background-color: #333;
+}
+
+.btn-dark--outline:hover,
+.btn-light--outline {
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 /* Box */
@@ -144,6 +156,21 @@ section a {
   margin: 0 auto;
 }
 
+.box-text {
+  max-width: 500px;
+  text-align: center;
+  /* justify-self: center; */
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.box-text .btn {
+  margin-top: 20px;
+}
+
+.box-f .box-text {
+  max-width: 600px;
+}
 /* || UTILITY CLASSES */
 
 /* Backgrounds */
@@ -214,4 +241,17 @@ section a {
 }
 .py-sm {
   padding: 10px 0;
+}
+
+/* Grid Styles */
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-reverse :first-child {
+  order: 2;
 }
