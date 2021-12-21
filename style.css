@@ -106,6 +106,13 @@ section a {
   display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar__nav-left,
+  .navbar__nav-right {
+    display: none;
+  }
+}
+
 /* Footer */
 .divider {
   max-width: 90%;
@@ -118,6 +125,7 @@ section a {
   max-width: 1440px;
   margin: 0 auto;
   padding: 30px 30px;
+  text-align: center;
 }
 
 .social {
@@ -278,5 +286,15 @@ section a {
 }
 
 .grid-reverse :first-child {
-  order: 2;
+  order: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-col-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-reverse :first-child {
+    order: 0;
+  }
 }
