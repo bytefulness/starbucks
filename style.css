@@ -111,6 +111,56 @@ section a {
   .navbar__nav-right {
     display: none;
   }
+
+  /* Hamburger Menu */
+  .hamburger {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    border: none;
+    z-index: 10;
+    transition: all 0.25;
+    cursor: pointer;
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .hamburger__top,
+  .hamburger__middle,
+  .hamburger__bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  .hamburger__middle {
+    transform: translateY(7px);
+  }
+
+  .hamburger__bottom {
+    transform: translateY(14px);
+  }
+
+  .open .hamburger__top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  .open .hamburger__middle {
+    display: none;
+  }
+  .open .hamburger__bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
 }
 
 /* Footer */
